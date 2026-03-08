@@ -58,11 +58,65 @@ class LL:
             if temp.next is not None:
                 res += "->"
             temp = temp.next
-        return res   
+        return res 
+    
+    def transverse(self):
+        temp_node = self.head
+        while temp_node is not None:
+            print(temp_node.value)
+            temp_node = temp_node.next
+            
+    def gets(self,index):
+        if index < 0 or index >= self.length:
+            return None
+        temp_node = self.head
+        for _ in range(index):
+            temp_node = temp_node.next
+        return temp_node.value
+
+    def sets(self,index,value):
+        temp_node = self.head
+        for _ in range(index):
+            temp_node = temp_node.next
+        temp_node.value = vale
+        
+    def frstpop(self):
+        if self.head is None:
+            return None
+        temp_node = self.head
+        self.head = self.head.next
+        temp_node.next = None
+        
+    def lastpop(self):
+        temp_node = self.head
+        while temp_node.next is not self.tail:
+            temp_node = temp_node.next
+        removed = self.tail
+        self.tail = temp_node
+        temp_node.next = None
+        return removed 
+    def remove(self,index):
+        prev_node = self.head
+        for _ in range(index-1):
+            prev_node = prev_node.next
+        popped_node = prev_node.next
+        prev_node.next = popped_node.next
+        popped_node.next = None
+             
+            
+               
 l = LL()
 
 l.first(10)
+l.first(5)
+
 l.last(20)
 l.last(30)
 
+l.insert(15,2)
+
 print(l)
+
+l.transverse()
+
+print(l.gets(2))

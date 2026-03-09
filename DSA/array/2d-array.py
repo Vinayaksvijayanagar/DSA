@@ -14,7 +14,7 @@ arr = np.array([[1,2,3,4,5],[6,7,8,9,10]])
 #transverse
 # def transverse(arr):
 #     for i in range(len(arr)):            #len(arr) → number of rows
-#         for j in range(len(arr[0])):      #len(arr[0]) → number of columnf
+#         for j in range(len(arr[0])):      #len(arr[0]) → number of column
 #             print(arr[i][j])                             
 # transverse(arr)                            #or use arr.shape
 

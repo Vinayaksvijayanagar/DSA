@@ -78,7 +78,7 @@ class LL:
         temp_node = self.head
         for _ in range(index):
             temp_node = temp_node.next
-        temp_node.value = vale
+        temp_node.value = value
         
     def frstpop(self):
         if self.head is None:

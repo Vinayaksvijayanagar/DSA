@@ -7,11 +7,28 @@ class Element:
 
 class Stack:
     def __init__(self):
-        self.itmes = []
+        self.items = []
         self.length = 0
         
     def isempty(self):
         if self.length == 0:
             return "empty string"
+        
+    def __str__(self):
+        res = []
+        for x in reversed(self.items):  #or use [xtr(x) for x in reversed(self.itmes)]
+            res.append(str(x))
+        return "\n".join(res)
+        
+    def push(self,element):
+        self.items.append(element)
+        self.length += 1
+        
+    
 s = Stack()
 print(s.isempty())
+s.push(1)
+s.push(2)
+s.push(3)
+s.push(4)
+print(s)

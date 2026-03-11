@@ -24,6 +24,16 @@ class Stack:
         self.items.append(element)
         self.length += 1
         
+    def pop(self):
+        self.length -= 1
+        return self.items.pop()
+        
+        
+    def get_length(self):
+        return self.length
+        
+    def peak(self):
+        return f"the first elemnet is {self.items[-1]}"
     
 s = Stack()
 print(s.isempty())
@@ -32,3 +42,7 @@ s.push(2)
 s.push(3)
 s.push(4)
 print(s)
+s.pop()
+print(s)
+print(s.length)
+print(s.peak())

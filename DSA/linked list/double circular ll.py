@@ -191,6 +191,7 @@ class CDLL:
             pop_node.prev.next = pop_node.next   
             pop_node.next = None
             pop_node.prev = None 
+        self.length -= 1
 l = CDLL()
 l.append(1)
 l.append(2)

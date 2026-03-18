@@ -40,7 +40,7 @@ class Queue:
             self.element.tail.next = new_node
             self.element.tail = new_node
             new_node.next = None
-            
+        self.length += 1  
     def deque(self):
         if self.element.head is None:
             return None
@@ -48,6 +48,7 @@ class Queue:
             popped_element = self.element.head
             self.element.head = self.element.head.next
             popped_element.next = None
+        self.length -= 1
 q = Queue()
 q.enque(1)
 q.enque(2)

@@ -50,13 +50,32 @@ def search(root,value):
                 return "got buddy in rightchild of root"
             else:
                 return search(root.rightchild,value)
-def getdeep(root):
+def minsuccess(root):
     temp = root
-    if temp is not None:
-        temp = temp.rightchild
+    while temp.leftchild is not None:
+        temp = temp.leftchild
     return temp
 
-# def delete(self,val)
+def delete(root,val):
+    #Base case
+    if root is None:
+        return None
+    if val < root.data:
+        root.leftchild = delete(root.leftchild,val)
+    elif val > root.data:
+        root.rightchild = delete(root.rightchild,val)
+    else:
+        if root.leftchild is None:
+            return root.rightchild
+        if root.rightchild is None:
+            return root.leftchild
+        #case 3 if node having 2 child nodes
+        temp_node = minsuccess(root.rightchild)
+        root.data = temp_node.data
+        root.rightchild = delete(root.rightchild,temp_node.data)
+    return root
+        
+ 
 root = Node(50)
 
 insert(root, 30)
@@ -67,4 +86,6 @@ insert(root, 60)
 insert(root, 80)
 traverse(root)
 print(search(root,30))
-print(getdeep(root))
+
+root = delete(root,50)
+traverse(root)

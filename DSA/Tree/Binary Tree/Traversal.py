@@ -92,7 +92,7 @@ def getdeep(root):
     else:
         custom_queue = deque()
         custom_queue.append(root)
-        while custom_queue:
+        while custom_queue: #LOOP imp step dont use while custom_queue isnot none
             root = custom_queue.popleft()
             if root.leftchild is not None:
                 custom_queue.append(root.leftchild)

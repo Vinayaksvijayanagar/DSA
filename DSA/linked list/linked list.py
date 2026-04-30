@@ -13,7 +13,7 @@ class LL:
         new_node = Node(value)
         
         if self.head is None :
-            self.head = new_node
+            self.head = new_node # use  arrow trick like here self.head -> new_node
             self.tail = new_node
         else:
             new_node.next = self.head
@@ -31,10 +31,10 @@ class LL:
         self.length += 1
           
     def insert(self,value,pos):
-        if self.length < 0  or pos > self.length:
+        if self.length < 0  or pos > self.length:  
             return False
         elif pos == 0:
-            self.first(value)
+            self.first(value)  # use self for inclass calling function
             return True
         elif pos == self.length:
             self.last(value)
@@ -42,7 +42,7 @@ class LL:
         else:
             temp_node = self.head
             new_node = Node(value)
-            for _ in range(pos-1):
+            for _ in range(pos-1): #go to previous node of insertion position
                 temp_node = temp_node.next
             new_node.next = temp_node.next
             temp_node.next = new_node

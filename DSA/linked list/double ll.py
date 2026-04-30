@@ -70,8 +70,8 @@ class Dll:
             return self.postpend(value)
         else:
             new_node = Node(value)
-            temp_node = self.head1
-            for _ in range(pos -1):
+            temp_node = self.head
+            for _ in range(pos -1): 
                 temp_node = temp_node.next
             new_node.next = temp_node.next
             new_node.prev = temp_node

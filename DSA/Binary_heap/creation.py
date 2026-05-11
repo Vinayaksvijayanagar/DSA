@@ -15,7 +15,13 @@ def sizeofbinaryheap(heap):
         return None
     else:
         return heap.heapsize
-    
+
+def levelorderheap(heap):
+    if not heap:
+        return None
+    else:
+        for i in range(1,heap.heapsize+1):
+            print(heap.heaplist[i])
         
 newbinaryheap = Heap(5)
 # peakheap()

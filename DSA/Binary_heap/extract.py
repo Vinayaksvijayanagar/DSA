@@ -54,7 +54,7 @@ def adjust_extract(heap,index,type):
     rightchild_index= (2*index)+1
     swaped_index = 0
     
-    if heap.heapsize > heap.heapsize:
+    if index > heap.heapsize:
         return None
     #for one child
     elif heap.heapsize == leftchild_index:

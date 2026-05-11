@@ -10,13 +10,13 @@ n = int(input())
 l = list(map(int,input().split()))
 if len(l) != n:
     print("Invalid input")
-    
-zeros = 0 
-ones = 0 
-twos = 0
+else:   
+    zeros = 0 
+    ones = 0 
+    twos = 0
 
-zeros = l.count(0)
-ones = l.count(1)
-twos = l.count(2)
-p = [0]*zeros+[1]*ones+[2]*twos
-print(*p)
+    zeros = l.count(0)
+    ones = l.count(1)
+    twos = l.count(2)
+    p = [0]*zeros+[1]*ones+[2]*twos
+    print(*p)

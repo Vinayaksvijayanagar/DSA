@@ -17,6 +17,9 @@ for j in range(c):
     for i in range(r):
         print(matrix[i][j],end = ' ')
     print()
-for row in matrix:
-    row.reverse()
-print(matrix)
+    
+    
+# to rotate 90 degree
+# for row in matrix:
+#     row.reverse()
+# print(matrix)

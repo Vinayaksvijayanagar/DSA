@@ -16,4 +16,15 @@ for i in range(len(n)):
         break
 else:
     print("None")
+    
+    
+# or 
+# n = input()
+
+# for i in n:
+#     if n.count(i) == 1:
+#         print(i)
+#         break
+# else:
+#     print("None")
             

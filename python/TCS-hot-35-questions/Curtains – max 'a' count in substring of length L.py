@@ -9,10 +9,11 @@
 s = input()
 l = int(input())
 
-length = len(s)
+max_count = 0
 
-if length%l == 0:
-    print(length//l)
+for i in range(0, len(s), l):
+    sub = s[i:i+l]
+    count_a = sub.count('a')
+    max_count = max(max_count, count_a)
 
-else:
-    print((length//l)+1)
+print(max_count)
